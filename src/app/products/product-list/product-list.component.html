@@ -1,0 +1,37 @@
+
+
+<app-product-form  (product)="setProductList($event)"></app-product-form>
+<div class="row">
+	<div class="col-md-12">&nbsp;</div>
+</div>
+<h5>Product List- A Feature Component</h5>
+<div class="row">
+	<div class="col-md-12">&nbsp;</div>
+</div>
+<table class="col-lg-8" id="callingHours-id" style="background-color: white;">
+	<thead>
+		<tr>
+			<th class="bordered-cell" style="width: 30%;">Product Name</th>
+			<th class="bordered-cell">Product Code</th>
+      		<th class="bordered-cell">Product Description</th>
+		</tr>
+	</thead>
+	<tbody>
+    <ng-template ngFor let-prod [ngForOf]="productList" let-i="index">
+			<tr>
+        <td>
+				{{prod.productName}}
+				</td>
+        <td>
+	    	{{prod.productCode}}
+				</td>
+         <td>
+		  	{{prod.productDescription}}
+				</td>
+			</tr>
+        
+		</ng-template>
+   
+	</tbody>
+
+</table>

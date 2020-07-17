@@ -1,0 +1,5 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+h2,h5 {
+  color: #7f1116;
+}
